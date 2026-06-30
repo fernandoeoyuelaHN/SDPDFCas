@@ -15,10 +15,10 @@ public class MainActivity extends AppCompatActivity {
 
         SDPDFOptions options = new SDPDFOptions();
 
-        options.setShowShareButton(false);
-        options.setShowOpenWithButton(false);
+        options.setShowShareButton(true);
+        options.setShowOpenWithButton(true);
         options.setShowDownloadButton(true);
-        options.setShowPrintButton(false);
+        options.setShowPrintButton(true);
 
         SDPDFCas.open(
                 this,
