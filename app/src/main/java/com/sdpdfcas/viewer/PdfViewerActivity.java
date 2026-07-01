@@ -17,7 +17,7 @@ import com.sdpdfcas.core.SDPDFConstants;
 import com.sdpdfcas.options.SDPDFOptions;
 import com.sdpdfcas.downloader.PdfDownloader;
 import com.sdpdfcas.menu.PdfMenuManager;
-
+import com.sdpdfcas.print.PdfPrintManager;
 import java.io.File;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -102,7 +102,10 @@ public class PdfViewerActivity extends AppCompatActivity {
             if (save != null) {
                 save.setVisible(options.isShowDownloadButton());
             }
-
+            MenuItem print = menu.findItem(R.id.action_print);
+            if (print != null) {
+                print.setVisible(options.isShowPrintButton());
+            }
         }
 
         return true;
@@ -138,6 +141,12 @@ public class PdfViewerActivity extends AppCompatActivity {
         if (id == R.id.action_save) {
 
             PdfMenuManager.save(this, currentPdfFile);
+            return true;
+
+        }
+        if (id == R.id.action_print) {
+
+            PdfPrintManager.print(this, currentPdfFile);
             return true;
 
         }

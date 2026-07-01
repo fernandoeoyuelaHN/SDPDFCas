@@ -7,16 +7,21 @@
         android:id="@+id/action_share"
         android:title="Compartir"
         android:icon="@drawable/ic_share"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_open"
         android:title="Abrir con..."
-        app:showAsAction="never"/>
+        app:showAsAction="never" />
 
     <item
         android:id="@+id/action_save"
         android:title="Guardar en Descargas"
-        app:showAsAction="never"/>
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_print"
+        android:title="Imprimir"
+        app:showAsAction="never" />
 
 </menu>
